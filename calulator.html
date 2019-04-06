@@ -1,0 +1,184 @@
+<head>
+<style>
+button{ 
+	padding: 10px;
+    border: 1px solid #77aaff;
+	box-shadow:  -1px 1px #77aaff,
+		 -2px 2px #77aaff,
+		 -3px 3px #77aaff,
+		 -4px 4px #77aaff,
+		 -5px 5px #77aaff;
+  margin:5px;
+}
+
+
+
+.zero{
+  width:10rem !important;
+  height:5rem !important;
+  font-size: 35px !important;
+}
+
+.btn{
+  width:9rem;
+  height:3rem;
+  margin-bottom:1rem;
+  font-size:25px;
+}
+.input{
+  text-align:center;
+  width:600px;
+  height:40px;
+  margin-bottom:30px;
+  border:none;
+  height:100px;
+margin-top:30px;
+  font-size:36px;
+
+}
+.operators{
+  float:right;
+  margin-right:20px;
+ 
+  
+}
+.outer{
+  max-width:670px;
+  height:650px;
+  border-style: solid;
+  border-color:black;
+  border-radius:30px;
+  background-color:red;
+}
+.sign{
+  font-weight:800;
+  font-size:25px;
+}
+.nums button{
+  height:70px;
+  font-size:35px;
+
+}
+</style>
+</head>
+<body>
+<center>
+  <div class = 'outer'>
+    <h1> Calculator</h1>
+
+  <input value ='' class = 'input' id= 'input'>   
+   <div class = 'operators'>
+       
+  <button class = 'btn sign' id = 'c'onclick="clearButton()">C</button>
+    <br>  
+    <button class = 'btn sign' id = '÷'onclick ="divide()">÷</button>
+        <br>
+    <button class = 'btn sign' id = 'x'onclick ="multiply()">X</button>
+        <br>
+    <button class = 'btn sign' id = '-'onclick ="subtract()">-</button>
+        <br>
+    <button class = 'btn sign' id = '+'onclick ="add()">+</button>
+        <br>
+    <button class = 'btn sign' id = '='onclick ="equals()">=</button>
+    
+  </div>
+    <div class = 'nums'>
+  <div class = '1-3'>
+    <button class = 'btn' id = '1' onclick ="one()">1</button>
+    <button class = 'btn' id = '2'onclick ="two()">2</button>
+    <button class = 'btn' id = '3'onclick ="three()">3</button>
+      
+  </div>
+
+   <div class = '4-6'>
+     <button class = 'btn' id = '4'onclick ="four()">4</button>
+     <button class = 'btn' id = '5'onclick ="five()">5</button>
+     <button class = 'btn' id = '6'onclick ="six()">6</button>
+  </div>
+
+     
+     <div class = '7-9'>
+       <button class = 'btn' id = '7'onclick ="seven()">7</button>
+       <button class = 'btn' id = '8'onclick ="eight()">8</button>
+       <button class = 'btn' id = '9'onclick ="nine()">9</button>
+       
+       </div>
+    </div>
+ <div class = '0'>
+          <button class = 'btn zero' id = '0'onclick ="zero()">0</button>
+
+  </div>
+ 
+</center>
+
+</body>
+<script>
+
+
+function one(){
+  document.getElementById("input").value += '1';
+}
+
+function two(){
+  document.getElementById("input").value += '2';
+}
+
+function three(){
+  document.getElementById("input").value += '3';
+}
+
+function four(){
+  document.getElementById("input").value += '4';
+}
+
+function five(){
+  document.getElementById("input").value += '5';
+}
+
+function six(){
+  document.getElementById("input").value += '6';
+}
+
+function seven(){
+  document.getElementById("input").value += '7';
+}
+
+function eight(){
+  document.getElementById("input").value += '8';
+}
+
+function nine(){
+  document.getElementById("input").value += '9';
+}
+
+function zero(){
+  document.getElementById("input").value += '0';
+}
+
+function clearButton(){
+  document.getElementById("input").value = '';
+}
+
+function divide(){
+  document.getElementById("input").value += ' / ';
+}
+
+function multiply(){
+  document.getElementById("input").value += ' * ';
+}
+
+function subtract(){
+  document.getElementById("input").value += ' - ';
+}
+
+function add(){
+  document.getElementById("input").value += ' + ';
+}
+
+function equals(){
+  var equation = document.getElementById("input").value;
+  document.getElementById("input").value = eval(equation) ;
+}
+
+
+</script>
